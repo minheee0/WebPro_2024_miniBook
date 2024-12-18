@@ -38,7 +38,7 @@
 						<%
                   }
                   %>
-						<li><a href="#">회원혜택</a></li>
+						<li><a href="#">회원</a></li>
 						<li><a href="#">이벤트 </a></li>
 						<li><a href="#">주문배송 </a></li>
 						<li><a href="#">고객센터</a></li>
