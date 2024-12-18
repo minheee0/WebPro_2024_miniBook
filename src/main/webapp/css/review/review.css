@@ -1,0 +1,421 @@
+/* 기본 스타일 초기화 */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+
+/* 전체 페이지 스타일 */
+
+body {
+
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+
+    background-color: #f9f9f9; /* 세련되고 깔끔한 배경 색 */
+
+    color: #333;
+
+    line-height: 1.6;
+
+    overflow: hidden; /* 전체 페이지에서 스크롤을 없앰 */
+
+    transform: scale(1); /* 페이지 크기 정상화 */
+
+    transform-origin: top left; /* 배율 적용 위치를 왼쪽 상단으로 설정 */
+
+}
+
+
+
+/* 로고 스타일 */
+
+.logo {
+
+    display: block;
+
+    margin: 40px auto 20px; /* 로고와 제목 간 여백 */
+
+    width: 300px; /* 로고 크기 적당히 조정 */
+
+    max-width: 100%;
+
+    cursor: pointer; /* 클릭 가능하게 만듬 */
+
+}
+
+
+
+/* 중앙 정렬을 위한 컨테이너 */
+
+.container {
+
+    width: 100%;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 5px 20px; /* 여백을 적당히 주어 내용이 꽉 차지 않도록 */
+
+}
+
+
+
+/* 제목 */
+
+h2 {
+
+    font-size: 36px; /* 제목 크기 조정 */
+
+    text-align: center;
+
+    color: #333;
+
+    margin-top: 20px;
+
+    letter-spacing: 1px;
+
+    font-weight: bold; /* 제목을 좀 더 강조 */
+
+}
+
+
+
+/* 리뷰 목록과 도서 정보를 담을 컨테이너 */
+
+.review-container {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 30px; /* 간격을 조금 줄여서 적당히 모은 느낌 */
+
+    flex-wrap: wrap;
+
+    margin-top: 40px;
+
+}
+
+
+
+/* 왼쪽 박스 (도서 정보) */
+
+.left-box {
+
+    width: 48%; /* 가로 크기 조정 */
+
+    background-color: #ffffff;
+
+    padding: 20px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+
+    display: flex;
+
+    flex-direction: column; /* 세로로 정렬되게 설정 */
+
+    gap: 20px;
+
+    align-items: center;
+
+    position: relative;
+
+    transition: transform 0.3s ease-in-out; /* 부드러운 애니메이션 */
+
+    height: auto; /* 동적으로 크기 조절 */
+
+}
+
+
+
+/* 왼쪽 박스 커서 오버 시 효과 */
+
+.left-box:hover {
+
+    transform: translateY(-8px); /* 박스가 위로 살짝 올라가는 효과 */
+
+}
+
+
+
+/* 도서 이미지 */
+
+.left-box img {
+
+    width: 220px; /* 이미지 크기를 적당히 줄여서 전체적으로 균형 잡기 */
+
+    height: 330px; /* 높이 비율 유지 */
+
+    object-fit: cover; /* 이미지 비율을 유지하면서 크기에 맞게 잘라냄 */
+
+    border-radius: 10px;
+
+}
+
+
+
+/* 도서 정보 텍스트 */
+
+.left-box .info {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+    flex-grow: 1;
+
+    align-items: center; /* 텍스트가 중앙 정렬되도록 */
+
+}
+
+
+
+/* 도서 정보 텍스트 스타일 */
+
+.left-box p {
+
+    font-size: 16px;
+
+    color: #333;
+
+    text-align: center; /* 텍스트 중앙 정렬 */
+
+}
+
+
+
+/* 리뷰쓰기 버튼 */
+
+.left-box .review-link {
+
+    padding: 10px 20px;
+
+    background-color: #6c5ce7; /* 깔끔하고 세련된 색상 */
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    text-align: center;
+
+    transition: background-color 0.3s ease;
+
+    position: absolute;
+
+    top: 20px;
+
+    right: 20px; /* 오른쪽 상단에 고정 */
+
+}
+
+
+
+.left-box .review-link:hover {
+
+    background-color: #5a4ecf; /* 버튼 호버 시 색상 변화 */
+
+}
+
+
+
+/* 오른쪽 박스 (리뷰 목록) */
+
+.right-box {
+
+    width: 48%; /* 가로 크기 조정 */
+
+    background-color: #ffffff;
+
+    padding: 20px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+
+    max-height: 500px;
+
+    overflow-y: auto;
+
+}
+
+
+
+/* 다시 검색 버튼 */
+
+.button {
+
+    display: inline-block;
+
+    padding: 12px 25px;
+
+    background-color: #ff4f58; /* 세련된 색상 */
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 30px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    text-align: center;
+
+    position: fixed; /* 고정 위치 */
+
+    right: 383px; /* 오른쪽에서 383px 떨어짐 */
+
+    top: 130px; /* 상단에서 130px 떨어짐 */
+
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    transition: background-color 0.3s ease;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+.button:hover {
+
+    background-color: #e03d4e; /* 버튼 호버 시 색상 변화 */
+
+}
+
+
+
+/* 리뷰 항목 스타일 */
+
+.right-box h3 {
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    color: #333;
+
+    margin-bottom: 20px;
+
+    text-align: center;
+
+}
+
+
+
+.right-box ul {
+
+    list-style-type: none;
+
+    padding: 0;
+
+}
+
+
+
+.right-box li {
+
+    margin-bottom: 25px;
+
+}
+
+
+
+.right-box li strong {
+
+    font-size: 16px;
+
+    color: #6c5ce7;
+
+}
+
+
+
+.right-box li p {
+
+    font-size: 14px;
+
+    color: #555;
+
+}
+
+
+
+.right-box li small {
+
+    font-size: 12px;
+
+    color: #888;
+
+    display: block;
+
+    margin-top: 10px;
+
+}
+
+
+
+/* 반응형 디자인 */
+
+@media (max-width: 768px) {
+
+    .review-container {
+
+        flex-direction: column;
+
+        gap: 20px;
+
+    }
+
+
+
+    .left-box, .right-box {
+
+        width: 100%;
+
+    }
+
+
+
+    .button {
+
+        position: relative;
+
+        top: auto;
+
+        right: auto;
+
+        margin: 20px 0;
+
+    }
+
+}

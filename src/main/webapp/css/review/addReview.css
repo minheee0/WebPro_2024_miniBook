@@ -1,0 +1,101 @@
+@charset "UTF-8";
+
+/* 전체 body 스타일 */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 로고 스타일 */
+.logo-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.logo {
+    width: 380px;
+    height: auto;
+}
+
+/* 페이지 제목 스타일 */
+h1 {
+    text-align: center;
+    color: #2d3436;
+    margin: 20px 0;
+}
+
+/* 폼 컨테이너 스타일 */
+.form-container {
+   	background: rgb(255, 255, 255);
+    border-radius: 20px;
+    padding: 25px;
+    max-width: 1200px;
+    width: 800px;
+   /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);*/
+    margin: 20px auto;
+    overflow: hidden;
+ 	box-shadow: 20px 20px 60px rgb(222, 221, 218),
+               -20px -20px 60px rgb(245, 245, 245);
+}
+
+/* 레이블 스타일 */
+label {
+    display: block;
+    margin: 12px 0 6px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* 별표 평점 스타일 */
+.rating-container {
+    display: flex;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.star {
+    font-size: 30px;
+    color: #ddd;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.star.highlight {
+    color: #ff9800; /* 별표 하이라이트 색 */
+}
+
+/* 텍스트 영역 스타일 */
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #dcdde1;
+    background-color: #fafbfc;
+    font-size: 16px;
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* 제출 버튼 스타일 */
+.submit-button {
+    background-color: rgb(64, 0, 128);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.submit-button:hover {
+    background-color: rgb(64, 0, 128);
+}

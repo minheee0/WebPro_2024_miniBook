@@ -1,0 +1,277 @@
+@charset "UTF-8";
+
+/* 컨테이너 스타일 */
+.container {
+	width: 60%; /* 전체 페이지 폭의 80% */
+	max-width: 1200px; /* 최대 폭 */
+	margin: 20px auto; /* 가운데 정렬 */
+	background-color: white; /* 박스 배경색 */
+	border-radius: 25px; /* 둥근 엣지 */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+	padding: 20px; /* 내부 여백 */
+	overflow: hidden; /* 넘치는 콘텐츠 숨김 */
+}
+/* 전체 페이지 스타일 */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  /* 연한 색상 + 천천히 움직이는 그라데이션 */
+  background: linear-gradient(
+    30deg,
+    rgba(246, 245, 244, 0.5), /* 연한 색상 적용 */
+    rgba(53, 132, 228, 0.5),
+    rgba(222, 221, 218, 0.5),
+    rgba(48, 204, 53, 0.5),
+    rgba(246, 245, 244, 0.5)
+  );
+
+  background-size: 200% 200%;
+
+/* 애니메이션 속도를 늘려 부드럽게 천천히 움직이게 */
+	animation: radialBG 10s ease-in-out infinite; /* 10초 주기로 느리게 애니메이션 적용 */
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0 1rem;
+}
+
+/* 원형 그라데이션 배경 애니메이션 */
+
+@keyframes radialBG {
+
+  0% {
+
+    background-position: 50% 50%;
+
+  }
+
+  25% {
+
+    background-position: 70% 30%;
+
+  }
+
+  50% {
+
+    background-position: 30% 70%;
+
+  }
+
+  75% {
+
+    background-position: 70% 70%;
+
+  }
+
+  100% {
+
+    background-position: 50% 50%;
+
+  }
+
+}
+
+
+
+
+
+/* 헤더 스타일 */
+
+.header {
+
+	background-color: rgb(255, 255, 255); /* 교보문고 블루톤 */
+
+	color: rgb(14, 32, 120);
+
+	padding: 20px;
+
+	text-align: center;
+
+	font-size: 1.5em;
+
+	font-weight: bold;
+
+	border-bottom: 3px solid rgb(0, 128, 0);
+
+	border-radius: 25px; /* 둥근 엣지 */
+
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+
+}
+
+
+
+.header img {
+
+	max-width: 400px; /* 로고 크기 조정 */
+
+	margin-bottom: 10px; /* 로고와 텍스트 사이 간격 */
+
+}
+
+
+
+.header h1 {
+
+	font-size: 120%;
+
+	margin: 0;
+
+	font-weight: bold;
+
+}
+
+
+
+/* 내비게이션 스타일 */
+
+.nav {
+
+	display: flex;
+
+	justify-content: center;
+
+	background-color: rgb(255, 255, 255);
+
+	padding: 10px 0;
+
+	margin-top: 15px; /* 헤더와 네비게이션 사이 간격 */
+
+	border-radius: 25px; /* 둥근 엣지 */
+
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+
+}
+
+
+
+.nav a {
+
+	color: white;
+
+	text-decoration: none;
+
+	padding: 10px 20px;
+
+	font-size: 16px;
+
+	margin: 0 8px;
+
+	border-radius: 25px; /* 둥근 엣지 */
+
+	background-color: #0074e4;
+
+	transition: background-color 0.3s ease;
+
+}
+
+
+
+.nav a:hover {
+
+	background-color: #0044aa; /* hover 효과 */
+
+}
+
+
+
+/* 메인 콘텐츠 스타일 */
+
+iframe {
+
+	width: 95%;
+
+	height: 600px;
+
+	border: none;
+
+	margin: 20px auto;
+
+	display: block;
+
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+	border-radius: 15px; /* 둥근 엣지 */
+
+}
+
+
+
+/* 섹션 안내 메시지 스타일 */
+
+h2 {
+
+	text-align: center;
+
+	margin-top: 40px;
+
+	padding: 20px;
+
+	color: #555;
+
+	background-color: #fff;
+
+	border-radius: 15px;
+
+	width: 45%;
+
+	margin: 40px auto;
+
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+
+
+/* 추가 섹션 스타일 (예: 회원 관리, 리뷰 목록 등) */
+
+.section {
+
+	background-color: white;
+
+	margin: 20px auto;
+
+	padding: 20px;
+
+	border-radius: 15px; /* 둥근 엣지 */
+
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+	width: 90%;
+
+	max-width: 1200px;
+
+}
+
+
+
+/* 버튼 스타일 */
+
+.button {
+
+	display: inline-block;
+
+	padding: 10px 20px;
+
+	color: white;
+
+	background-color: #0052cc;
+
+	text-decoration: none;
+
+	border-radius: 25px;
+
+	transition: background-color 0.3s ease;
+
+	font-size: 16px;
+
+}
+
+
+
+.button:hover {
+
+	background-color: #0044aa;
+
+}

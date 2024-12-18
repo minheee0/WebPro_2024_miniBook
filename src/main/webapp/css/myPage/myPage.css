@@ -1,0 +1,199 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 전체 페이지 스타일 */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+}
+
+/* 최상단 로고 및 제목 영역 */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px 20px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 64, 128);
+    border-bottom: 2px solid #ddd;
+}
+
+.header img {
+    height: 60px;
+    margin-right: 10px;
+}
+
+.header h3 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* 전체 콘텐츠 영역 스타일 */
+.container {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    gap: 20px;
+}
+
+
+/* 회원 정보 영역 스타일 */
+.member-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 250px; /* 요소가 이미지 영역으로 보이게 설정 */
+    height: 350px; 
+    border: 4px solid rgb(118, 163, 74);
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+    background-size: cover;
+    background-position: center;
+}
+
+/* 프로필 사진 영역 */
+.profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    
+    background-color: green;
+    
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 55px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* 링크 기본 스타일 */
+a {
+    text-decoration: none; /* 밑줄 제거 */
+}
+
+/* '정보 수정' 텍스트 스타일 */
+.info-id {
+    font-size: 16px; /* 텍스트 크기 */
+    font-weight: bold; /* 글씨 굵게 */
+    color: #003366; /* 남색 텍스트 색상 */
+    transition: color 0.3s ease; /* 색상 변화에 부드러운 전환 효과 추가 */
+}
+
+/* 호버 시 스타일 */
+.info-id:hover {
+    color: #006699; /* 마우스를 올렸을 때 색상 변경 */
+    text-decoration: underline; /* 마우스를 올렸을 때 밑줄 추가 */
+}
+
+
+/* 리뷰 영역 스타일 */
+.review-section {
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 15px;
+    padding: 20px;
+    flex: 2;
+    height: 500px;
+    overflow-y: auto;
+}
+
+/* 리뷰 리스트 스타일 */
+.review-section ul {
+    list-style: none;
+}
+
+.review-section li {
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    margin: 8px 0;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.review-section li:hover {
+    transform: translateY(-5px);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* 푸터 스타일 */
+footer {
+    margin-top: 60px;
+    padding: 10px 0;
+    background-color: rgb(249, 249, 249);
+    color: rgb(154, 153, 150);
+    text-align: center;
+    font-size: 14px;
+}
+
+/* 모달 스타일 */
+.modal-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.modal h4 {
+    margin-bottom: 10px;
+}
+
+.modal input[type="file"] {
+    margin: 10px 0;
+}
+
+.modal button {
+    margin: 5px;
+    padding: 5px 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal button:hover {
+    background: #0056b3;
+}
+
+/* 반응형 디자인 개선 */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .member-info {
+        width: 100%;
+        height: auto;
+    }
+
+    .review-section {
+        width: 100%;
+        height: auto;
+        margin-top: 10px;
+    }
+
+    .review-section li {
+        padding: 8px;
+    }
+}

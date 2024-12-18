@@ -1,0 +1,68 @@
+@charset "UTF-8";
+
+/* Body 스타일 */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 20px;
+}
+
+/* 제목 스타일 */
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* 폼 스타일 */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* 라벨 스타일 */
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+/* 입력 필드와 버튼 스타일 */
+input, button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* 버튼 스타일 */
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* 뒤로가기 링크 스타일 */
+.back-to-list {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.back-to-list a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.back-to-list a:hover {
+    text-decoration: underline;
+}

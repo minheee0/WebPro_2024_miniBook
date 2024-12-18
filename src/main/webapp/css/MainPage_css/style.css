@@ -1,0 +1,440 @@
+/* 브라우저 배율을 100%로 고정 */
+body {
+    margin: 0;
+    overflow-x: hidden; /* 수평 스크롤 방지 */
+    text-align: center; /* 텍스트 가운데 정렬 */
+    transform: scale(1.0); /* 페이지의 배율을 100%로 설정 */
+    transform-origin: top; /* 페이지의 배율 변경 시, 상단을 기준으로 변경 */
+    font-family: 'Pretendard', sans-serif;
+    font-weight: 300; /* 얇고 가벼운 폰트 */
+    color: #333;
+    line-height: 1.8;
+}
+
+/* 헤더 관련 스타일 */
+
+/* 상단 메뉴 */
+.top_1 {
+    position: relative;
+    display: flex;
+    justify-content: center; /* 자식 요소들을 중앙 정렬 */
+    align-items: center; /* 세로 가운데 정렬 */
+    gap: 0px; /* 버튼들 간의 간격 */
+    margin-top: 5px;
+    padding-top: 1px;
+}
+
+#top_menu {
+    position: relative;
+    display: flex; /* 메뉴 항목을 가로로 배치 */
+    align-items: center; /* 메뉴 항목을 세로로 가운데 정렬 */
+    margin-left: auto;
+}
+
+#top_menu ul {
+    list-style: none; /* 기본 리스트 스타일 제거 */
+    padding: 0;
+    margin: 0;
+    display: flex; /* 메뉴 항목을 가로로 정렬 */
+    margin-right: 10px; /* 오른쪽 여백 */
+}
+
+#top_menu li {
+    margin-left: 5px; /* 메뉴 항목 간 간격 */
+}
+
+#top_menu a {
+    text-decoration: none; /* 링크 밑줄 제거 */
+    font-size: 13px;
+    color: #888888; /* 기본 색상 */
+    font-family: "Inter", Helvetica, sans-serif;
+}
+
+#top_menu a:hover {
+    color: #007bff; /* 호버 시 색상 */
+}
+
+/* 로고 */
+.top2 .m-i-n-i-i-logo {
+    position: absolute;
+    width: 260px;
+    height: 70px;
+    top: 102px;
+    left: 380px;
+    object-fit: cover;
+    
+}
+/* 검색창 스타일 */
+.search-container {
+    align-items: center;
+    justify-content: center; /* 검색창 정렬 */
+    position: absolute; /* 위치 고정 */
+    top: 115px; /* 로고 아래 위치 */
+    left: 1090px; /* 왼쪽 위치 */
+    transform: translateX(-50%); /* 검색창 가로 중앙 정렬 */
+    width: 1500px;
+    margin: 0 auto; /* 검색창 중앙 정렬 */
+  
+}
+
+
+.search-input {
+    padding: 10px;
+    width: 500px; /* 검색창 넓이 */
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 검색창 그림자 */
+}
+
+.search-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 50px;
+    background-color: rgb(64, 0, 128); /* 검색 버튼 색 */
+    color: white;
+    border: none;
+    transition: background-color 0.3s; /* 배경색 변화 애니메이션 */
+}
+
+.search-button:hover {
+    background-color: #45a049; /* 검색 버튼 hover 시 색상 변경 */
+}
+
+.search-container .one {
+    width: 45px; /* 장바구니 이미지 크기 */
+    height: 45px;
+    margin-left: 80px;
+    cursor: pointer;
+    object-fit: cover;
+}
+
+/* 마이페이지 아이콘 */
+.search-container .two {
+    width: 63px; /* 동그라미 크기 */
+    height: 63px;
+    margin-left: 30px;
+    cursor: pointer;
+    border-radius: 50%; /* 동그라미로 자르기 */
+    overflow: hidden; /* 원 밖으로 이미지를 잘라냄 */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* 부드러운 애니메이션 */
+
+    background-size: cover; /* 이미지를 박스 안에 꽉 채움 */
+    background-position: center; /* 이미지를 중앙에 위치 */
+}
+
+.search-container .two:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1); /* 호버 시 더 강한 그림자 효과 */
+    transform: translateY(-2px); /* 살짝 위로 이동 */
+}
+
+
+/* Navbar 스타일 */
+.top_3 {
+    position: relative; /* 추가 */
+    margin-top: 0px; /* 위쪽 여백을 0px 추가 */
+}
+
+.top_3 .line1 {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    top: 74px;
+    left: 370px;
+    background-color: #ffffff;
+    border-radius: 24px;
+    border: 1px solid #c8c8c8;
+}
+
+.line {
+	 position: center;
+	 margin-top: 15px;
+    
+}
+
+
+.top_3 .navbar {
+    position: absolute;
+    display: flex;
+    justify-content: space-between; /* 간격 균등 분배 */
+    align-items: center;
+    width: 810px;
+    height: 22px;
+    top: 85px;
+    left: 448px;
+}
+
+
+.top_3 .navbar div {
+    font-size: 17px;
+    font-weight: 400;
+    color: #000000;
+    font-family: "Inter", Helvetica;
+}
+
+.top_3 .navbar1 a, .top_3 .navbar2 a {
+    font-weight: 600;
+    color: rgb(64, 0, 128); /* 빨간색 */
+    text-decoration: none;
+}
+
+.top_3 .navbar1 a:hover, .top_3 .navbar2 a:hover {
+    color: #cc0000; /* 호버 시 어두운 빨간색 */
+}
+
+.top_3 .navbar3, .top_3 .navbar4, .top_3 .navbar5, .top_3 .navbar6,
+.top_3 .navbar7 {
+    font-weight: 400;
+    color: #000000;
+}
+
+.top_3 .navbar div:hover {
+    color: #007bff; /* 나머지 항목 호버 시 파란색 */
+}
+
+/* 오른쪽 섹션 */
+.top_3 .top_3_right {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 78px;
+    left: 1294px;
+}
+
+.box1 .plus_line {
+    width: 27px;
+    height: 26px;
+    margin-right: 10px;
+}
+
+.box1 .plus {
+    width: 25px;
+    height: 25px;
+}
+
+.plus-circle {
+    display: inline-flex; /* 정렬을 위한 유연한 레이아웃 */
+    align-items: center; /* 수직 중앙 정렬 */
+    justify-content: center; /* 수평 중앙 정렬 */
+    width: 25px; /* 원형 크기 */
+    height: 25px; /* 원형 크기 */
+    background-color: #d9d9d9; /* 연한 회색 배경 */
+    border-radius: 50%; /* 원 모양 만들기 */
+    color: #333333; /* '+' 텍스트 색상 */
+    font-size: 15px; /* '+' 크기 */
+    font-weight: bold; /* '+' 강조 */
+}
+
+
+
+.top_3 .member {
+    font-size: 17px;
+    color: #000000;
+    
+}
+/* id 텍스트 스타일 */
+.member-id {
+    font-weight: bold; /* 텍스트를 볼드 처리 */
+    color: navy; /* 남색으로 변경 */
+}
+.logout-id {
+    font-weight: bold; /* 텍스트를 볼드 처리 */
+}
+/* 배너 스타일 (광고 이미지에만 적용) */
+.banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 60%;
+    margin: 0 auto;
+    margin-top: 150px;
+    
+}
+
+.banner img {
+    padding-top: 10px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* 본문 콘텐츠 스타일 */
+.b {
+    padding: 5px;
+    margin: 0 auto;
+    list-style-type: none;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+ul li {
+    display: inline-block;
+    margin: 50px;
+    text-align: center;
+}
+
+/* 가로 정렬을 위한 스타일 */
+.horizontal-list {
+    display: flex; /* Flexbox로 가로 정렬 */
+    gap: 20px; /* 항목 간 간격 */
+    list-style: none; /* 기본 리스트 스타일 제거 */
+    padding: 0; /* 리스트 기본 패딩 제거 */
+    margin: 0; /* 리스트 기본 마진 제거 */
+}
+
+/* 책 리스트 항목 박스 */
+/* 책 리스트 항목 박스 */
+.horizontal-list li {
+    display: flex; /* 이미지와 제목을 수직 정렬 */
+    flex-direction: column; /* 수직 정렬 */
+    align-items: center; /* 가로 가운데 정렬 */
+    width: 180px; /* 각 항목의 고정 너비 */
+    text-align: center; /* 내용 가운데 정렬 */
+    margin: 20px; /* 항목 간 간격 */
+    padding: 20px; /* 박스 내 여백 */
+    background-color: #ffffff;
+    border-radius: 10px; /* 모서리를 둥글게 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
+    position: relative; /* 순위 번호의 위치 지정 기준 */
+}
+
+
+/* 도서 이미지 스타일 */
+/* 도서 이미지 스타일 */
+.book-cover {
+    width: 120px; /* 이미지 너비를 줄임 */
+    height: 160px; /* 이미지 높이를 줄임 */
+    object-fit: cover; /* 이미지 비율 유지 */
+    /* 모서리를 둥글게 */
+    margin-bottom: 10px; /* 이미지와 제목 간 간격 */
+}
+
+/* 책 상자 마우스 오버 시 확대 효과 */
+.horizontal-list li:hover {
+    transform: scale(1.02); /* 마우스를 올리면 상자가 커짐 */
+    background-color: #ffffff; /* 배경색을 연한 파란색으로 변경 */
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.4); /* 파란색 그림자 추가 */
+    transition: all 0.3s ease; /* 부드러운 전환 효과 */
+}
+
+/* 도서 제목 스타일 */
+.horizontal-list li strong {
+    font-size: 14px; /* 제목 글자 크기 */
+    font-weight: bold; /* 제목 글자 굵게 */
+    color: #333; /* 제목 색상 */
+    text-align: center; /* 제목 가운데 정렬 */
+    margin-top: 10px; /* 제목과 이미지 간의 간격을 조금 더 추가 */
+    font-family: 'Roboto', sans-serif;
+
+}
+
+
+
+/* 링크 기본 스타일 제거 */
+a {
+    text-decoration: none; /* 링크 밑줄 제거 */
+    border: none; /* 링크의 기본 테두리 제거 */
+    outline: none; /* 클릭 시 생기는 외곽선 제거 */
+}
+
+/* 링크 안의 이미지 */
+a img {
+    border: none; /* 이미지 주변 테두리 제거 */
+    outline: none; /* 클릭 시 생기는 외곽선 제거 */
+}
+
+.bestseller {
+    margin-top: 30px;
+    font-size: 30px;
+    color: black; /* 글씨 색을 검은색으로 설정 */
+    font-weight: bold;
+    text-align: left; /* 텍스트를 왼쪽 정렬 */
+    width: 100%; /* 전체 너비를 사용 */
+    padding-left: 0; /* 왼쪽 여백 제거 */
+    margin-left: 350px; /* 왼쪽으로 이동 */
+    font-family: "Inter", Helvetica, sans-serif;
+    
+}
+
+.top-text {
+    color: rgb(93, 187, 64); /* 연두색 (초록색)으로 설정 */
+    font-weight: bold; /* 글자 두껍게 */
+}
+
+/* 순위 번호 스타일 */
+.rank-number {
+    position: absolute; /* 절대 위치 지정 */
+    top: 10px; /* 박스 상단에서의 간격 */
+    left: 10px; /* 박스 왼쪽에서의 간격 */
+    font-size: 16px; /* 순위 번호 크기 */    
+    color: white; /* 기본 순위 색상 */
+    background-color: rgb(198, 198, 198); /* 연한 배경색 (필요하면 제거 가능) */
+    padding: 3px 9px; /* 번호 주변 여백 */
+    border-radius: 5px; /* 모서리 둥글게 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 약간의 그림자 효과 */
+}
+
+/* 1위 스타일 */
+.first-rank {
+   font-weight: bold;
+    color: white; /* 1위만 주황색으로 */
+    background-color: rgb(48, 62, 139); /* 1위 배경을 연한 주황으로 */
+}
+
+
+
+
+
+
+/* 푸터 */
+.footer_address {
+   margin-top: 40px; 
+    width: 100vw; /* 선의 너비를 100%로 설정 */
+ 
+    text-align: center;
+    font-size: 10px;
+    color:#b0b0b0;
+    margin: 0;
+    padding: 0; /* padding 제거 */
+    margin-bottom: 10px; 
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.slider img {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+    transition: left 1s ease-in-out;
+}
+
+.slider img.active {
+    left: 0;
+}
+
+.slider img.next {
+    left: 100%;
+}
+
+.banner2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}

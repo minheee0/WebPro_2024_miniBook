@@ -1,0 +1,223 @@
+/* 전체 페이지 스타일 */
+
+body {
+
+  font-family: Arial, Helvetica, sans-serif;
+
+
+
+  /* 연한 색상 + 천천히 움직이는 그라데이션 */
+
+  background: linear-gradient(
+
+    30deg,
+
+    rgba(246, 245, 244, 0.5), /* 연한 색상 적용 */
+
+    rgba(53, 132, 228, 0.5),
+
+    rgba(222, 221, 218, 0.5),
+
+    rgba(48, 204, 53, 0.5),
+
+    rgba(246, 245, 244, 0.5)
+
+  );
+
+
+
+  background-size: 200% 200%;
+
+  
+
+  /* 애니메이션 속도를 늘려 부드럽게 천천히 움직이게 */
+
+  animation: radialBG 10s ease-in-out infinite; /* 10초 주기로 느리게 애니메이션 적용 */
+
+
+
+  height: 100vh;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  padding: 0 1rem;
+
+}
+
+/* 원형 그라데이션 배경 애니메이션 */
+
+@keyframes radialBG {
+
+  0% {
+
+    background-position: 50% 50%;
+
+  }
+
+  25% {
+
+    background-position: 70% 30%;
+
+  }
+
+  50% {
+
+    background-position: 30% 70%;
+
+  }
+
+  75% {
+
+    background-position: 70% 70%;
+
+  }
+
+  100% {
+
+    background-position: 50% 50%;
+
+  }
+
+}
+
+
+
+
+
+/* 로고 이미지 스타일 */
+
+.logo {
+
+   width: 85%; /* 원하는 너비 */
+
+   margin: 10px auto;
+
+   object-fit: contain;
+
+   display: block;
+
+}
+
+
+
+/* 컨테이너 스타일 */
+
+.container {
+
+    
+
+    margin: 20px auto;
+
+    background-color: #ffffff;
+
+    padding: 30px 40px;
+
+    border-radius: 15px;
+
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
+
+}
+
+
+
+/* 제목 스타일 */
+
+h2{
+
+    font-size: 1.5em; /* 제목 크기 확대 */
+
+    color: rgb(14, 32, 120);
+
+    text-align: center;
+
+    margin-bottom: 30px; /* 간격 확대 */
+
+}
+
+
+
+/* 입력 필드 스타일 */
+
+input[type="text"] {
+
+    width: 90%; /* 입력 필드가 컨테이너 너비를 채움 */
+
+    padding: 15px; /* 높이 설정 */
+
+    font-size: 1.3em; /* 글꼴 크기 확대 */
+
+    margin: 15px 0; /* 위아래 간격 */
+
+    border: 1px solid #ccc;
+
+    border-radius: 8px;
+
+}
+
+
+
+/* 버튼 스타일 */
+
+button {
+
+    background-color: #007bff;
+
+    color: white;
+
+    border: none;
+
+    padding: 15px 20px; /* 버튼 크기 확대 */
+
+    font-size: 1.4em; /* 글꼴 크기 확대 */
+
+    border-radius: 8px; /* 둥근 모서리 강화 */
+
+    cursor: pointer;
+
+    margin: 20px auto; /* 버튼을 세로로 가운데 정렬 */
+
+    display: block; /* block 속성으로 중앙 배치 가능 */
+
+    width: 50%; /* 버튼 크기 조정 */
+
+}
+
+
+
+button:hover {
+
+    background-color: #0056b3;
+
+}
+
+
+
+/* 안내 문구 스타일 */
+
+p.info {
+
+    font-size: 1.1em; /* 글자 크기 확대 */
+
+    margin-top: 20px;
+
+    color: #555;
+
+}
+
+
+
+/* 경고 메시지 스타일 */
+
+p[style*="color: red;"] {
+
+    font-size: 1.2em; /* 경고 메시지 크기 확대 */
+
+    margin-top: 15px;
+
+    color: #e63946;
+
+}  

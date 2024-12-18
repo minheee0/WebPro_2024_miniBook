@@ -1,0 +1,343 @@
+/* 전역 스타일링 */
+
+* {
+
+    box-sizing: border-box;
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+
+
+/* 전체 페이지 스타일 */
+
+body {
+
+  font-family: Arial, Helvetica, sans-serif;
+
+
+
+  /* 연한 색상 + 천천히 움직이는 그라데이션 */
+
+  background: linear-gradient(
+
+    30deg,
+
+    rgba(246, 245, 244, 0.5), /* 연한 색상 적용 */
+
+    rgba(53, 132, 228, 0.5),
+
+    rgba(222, 221, 218, 0.5),
+
+    rgba(48, 204, 53, 0.5),
+
+    rgba(246, 245, 244, 0.5)
+
+  );
+
+
+
+  background-size: 200% 200%;
+
+  
+
+  /* 애니메이션 속도를 늘려 부드럽게 천천히 움직이게 */
+
+  animation: radialBG 10s ease-in-out infinite; /* 10초 주기로 느리게 애니메이션 적용 */
+
+
+
+  height: 100vh;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  padding: 0 1rem;
+
+}
+
+/* 원형 그라데이션 배경 애니메이션 */
+
+@keyframes radialBG {
+
+  0% {
+
+    background-position: 50% 50%;
+
+  }
+
+  25% {
+
+    background-position: 70% 30%;
+
+  }
+
+  50% {
+
+    background-position: 30% 70%;
+
+  }
+
+  75% {
+
+    background-position: 70% 70%;
+
+  }
+
+  100% {
+
+    background-position: 50% 50%;
+
+  }
+
+}
+
+
+
+
+
+/* 컨테이너 스타일링 (중앙 박스) */
+
+.container {
+
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    padding: 2rem;
+
+    background-color: #ffffff;
+
+    border: 2px solid rgb(14, 32, 120);
+
+    border-radius: 8px;
+
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+}
+
+
+
+.container:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.4);
+
+}
+
+
+
+/* 제목 스타일링 */
+
+h1 {
+
+    font-size: 2rem;
+
+    color: rgb(14, 32, 120);
+
+    margin-bottom: 1.5rem;
+
+    text-align: center;
+
+}
+
+
+
+/* 버튼 스타일링 */
+
+.submit-button {
+
+    background-color: rgb(0, 128, 0);
+
+    color: rgb(255, 255, 255);
+
+    font-size: 16px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    padding: 0.8rem 2rem;
+
+    cursor: pointer;
+
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+
+}
+
+
+
+.submit-button:hover {
+
+    background-color: rgb(0, 128, 0);
+
+    transform: translateY(-3px);
+
+    box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.3);
+
+}
+
+
+
+/* 입력 필드 스타일링 */
+
+.form-input,
+
+.form-textarea,
+
+.form-select {
+
+    width: 100%;
+
+    padding: 10px;
+
+    margin: 10px 0;
+
+    border: 2px solid rgb(0, 128, 0);
+
+    border-radius: 6px;
+
+    font-size: 14px;
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+
+
+.form-input:hover,
+
+.form-textarea:hover,
+
+.form-select:hover {
+
+    transform: translateX(3px);
+
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+
+}
+
+
+
+/* 리뷰 폼 컨테이너 */
+
+.review-form {
+
+    width: 100%;
+
+    text-align: left;
+
+    margin: 1rem 0;
+
+}
+
+
+
+/* 별점 UI */
+
+.rating-container {
+
+    display: flex;
+
+    align-items: center;
+
+    text-align: center;
+
+    margin-bottom: 1rem;
+
+}
+
+
+
+.star {
+
+    font-size: 2rem;
+
+    color: rgb(0, 128, 0);
+
+    cursor: pointer;
+
+    transition: color 0.3s ease, transform 0.2s ease;
+
+}
+
+
+
+.star:hover,
+
+.star.filled:hover {
+
+    color: rgb(14, 32, 120);
+
+    transform: scale(1.2);
+
+}
+
+
+
+.star.filled {
+
+    color: rgb(14, 32, 120);
+
+}
+
+
+
+/* 반응형 디자인 */
+
+@media (max-width: 768px) {
+
+    .container {
+
+        padding: 1.5rem;
+
+    }
+
+}
+
+
+
+@media (max-width: 480px) {
+
+    h1 {
+
+        font-size: 1.5rem;
+
+    }
+
+
+
+    .star {
+
+        font-size: 1.5rem;
+
+    }
+
+
+
+    .form-textarea {
+
+        margin-bottom: 1rem;
+
+    }
+
+}
